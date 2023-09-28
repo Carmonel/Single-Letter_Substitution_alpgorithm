@@ -1,6 +1,16 @@
 #include "MyCipher.h"
 #include <iostream>
 #include <fstream>
+#include <sstream>
+
+std::string byteToStr(unsigned char byte){
+    std::ostringstream str;
+    if (byte < 0x10) str << "0" << std::hex << std::uppercase << (int)byte;
+    else str << std::hex << std::uppercase << (int)byte;
+
+    return str.str();
+}
+
 
 MyCipher::MyCipher() {
     newRandomKeys();
@@ -18,12 +28,7 @@ void MyCipher::newRandomKeys() {
         alphabet[i] = tmp;
         checker[tmp] = true;
 
-        if (i < 0x10) std::cout << "0" << std::hex << std::uppercase << i;
-        else std::cout << std::hex << std::uppercase << i;
-        std::cout << " -> ";
-        if (alphabet[i] < 0x10) std::cout << "0" << std::hex << std::uppercase << (int)alphabet[i];
-        else std::cout << std::hex << std::uppercase << (int)alphabet[i];
-        std::cout << std::endl;
+        std::cout << byteToStr(i) << " -> " << byteToStr(alphabet[i]) << std::endl;
     }
 }
 
@@ -128,7 +133,6 @@ void MyCipher::decode(const std::string& inputPath, const std::string& outputPat
 
 void MyCipher::newCustomKeys() {
     std::cout << "Print keys:" << std::endl;
-    bool checker[N] = {false};
     for (int i = 0; i < N; i++){
         if (i < 0x10) std::cout << "0" << std::hex << std::uppercase << i;
         else std::cout << std::hex << std::uppercase << i;
@@ -137,6 +141,78 @@ void MyCipher::newCustomKeys() {
         std::cout << std::endl;
     }
     std::cout << std::endl;
+}
+
+void MyCipher::changeKeyInEcodedFile(const std::string& filePath, unsigned char byte, unsigned char newByte) {
+    std::cout << "Starting changing: " << byteToStr(byte) << " -> " << byteToStr(newByte) << "; and " << byteToStr(newByte) << " -> " << byteToStr(byte) << std::endl;
+
+    std::fstream file;
+    try{
+        file.open(filePath, std::ios::binary | std::ios::in | std::ios::out);
+    }
+    catch(std::exception& e){
+        std::cout << "file.open() error: " << e.what() << std::endl;
+        std::cout << std::endl << "inputPath: " << filePath;
+        exit(-1);
+    }
+    if (!file.is_open()){
+        std::cout << "inputFile.is_open() returned false." << std::endl;
+        std::cout << std::endl << "inputPath: " << filePath;
+        exit(-1);
+    }
+
+    // alphabet[byte] = newByte
+    unsigned char tmp;
+    for (int i = 0; i < byte; i++) file.read(reinterpret_cast<char*>(&tmp), 1);
+    file.put(newByte);
+    file.seekg(std::ios::beg);
+    // alphabet[newByte] = byte
+    for (int i = 0; i < newByte; i++) file.read(reinterpret_cast<char*>(&tmp), 1);
+    file.put(byte);
+    file.seekg(std::ios::beg);
+    for (int i = 0; i < N; i++) file.read(reinterpret_cast<char*>(&tmp), 1);
+    // reading data and replacing bytes
+    while (file.read(reinterpret_cast<char*>(&tmp), 1)){
+        if (tmp == byte) file.put(newByte);
+        else if (tmp == newByte) file.put(byte);
+    }
+
+    std::cout << "Replacing competed." << std::endl;
+
+    file.close();
+}
+
+void MyCipher::printKeys() {
+    std::cout << "Keys:" << std::endl;
+    for (int i = 0; i < N; i++){
+        std::cout << byteToStr(i) << " = " << byteToStr(alphabet[i]);
+    }
+}
+
+void MyCipher::printKeysFromFile(const std::string &filePath) {
+    std::cout << "Keys from file '" << filePath << "':" << std::endl;
+    std::ifstream file;
+    try{
+        file.open(filePath, std::ios::binary | std::ios::in);
+    }
+    catch(std::exception& e){
+        std::cout << "file.open() error: " << e.what() << std::endl;
+        std::cout << std::endl << "inputPath: " << filePath;
+        exit(-1);
+    }
+    if (!file.is_open()){
+        std::cout << "inputFile.is_open() returned false." << std::endl;
+        std::cout << std::endl << "inputPath: " << filePath;
+        exit(-1);
+    }
+
+    unsigned char byte;
+    for (int i = 0; i < N; i++){
+        file.read(reinterpret_cast<char*>(&byte), 1);
+        std::cout << byteToStr(i) << " = " << byteToStr(byte) << std::endl;
+    }
+
+    file.close();
 }
 
 MyCipher::~MyCipher() = default;

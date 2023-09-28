@@ -13,12 +13,10 @@ iostream
 -
 fstream
 -
+sstream
+-
 
 /cygdrive/c/Users/Ярослав/CLionProjects/ChangeCipher/MyCipher.h
 string
 -
-
-/cygdrive/c/Users/Ярослав/CLionProjects/ChangeCipher/main.cpp
-MyCipher.h
-/cygdrive/c/Users/Ярослав/CLionProjects/ChangeCipher/MyCipher.h
 

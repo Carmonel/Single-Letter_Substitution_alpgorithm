@@ -11,7 +11,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9f24b61-9604-45ea-a08f-361a1f58a21a" name="Default Changelist" comment="" />
+    <list default="true" id="f9f24b61-9604-45ea-a08f-361a1f58a21a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyCipher.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MyCipher.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyCipher.h" beforeDir="false" afterPath="$PROJECT_DIR$/MyCipher.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ChangeCipher.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ChangeCipher.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ChangeCipher.dir/MyCipher.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ChangeCipher.dir/MyCipher.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ChangeCipher.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ChangeCipher.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ChangeCipher.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ChangeCipher.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +30,11 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="2W1CHIUoBf4jezJu15mlxTrHs7L" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -56,7 +69,8 @@
       <workItem from="1695890646396" duration="1503000" />
       <workItem from="1695899596747" duration="1137000" />
       <workItem from="1695912195861" duration="35000" />
-      <workItem from="1695914462357" duration="2038000" />
+      <workItem from="1695914462357" duration="2199000" />
+      <workItem from="1695936359165" duration="3486000" />
     </task>
     <servers />
   </component>
@@ -64,21 +78,21 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1695916252576">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1695939879360">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1695916252576" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1695916252576">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1695939879360" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1695939879360">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1695916252576" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1695916252576">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1695939879360" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1695939879360">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1695916252576" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1695916252576">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1695939879360" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1695939879360">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1695916252576" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1695939879360" />
   </component>
 </project>

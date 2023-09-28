@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/ChangeCipher.dir/main.cpp.o CMakeFiles/ChangeCipher.dir/MyCipher.cpp.o  -o ChangeCipher.exe -Wl,--out-implib,libChangeCipher.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

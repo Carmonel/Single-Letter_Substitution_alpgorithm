@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/Ярослав/CLionProjects/ChangeCipher/MyCipher.cpp
+MyCipher.h
+/cygdrive/c/Users/Ярослав/CLionProjects/ChangeCipher/MyCipher.h
+iostream
+-
+fstream
+-
+
+/cygdrive/c/Users/Ярослав/CLionProjects/ChangeCipher/MyCipher.h
+string
+-
+
+/cygdrive/c/Users/Ярослав/CLionProjects/ChangeCipher/main.cpp
+MyCipher.h
+/cygdrive/c/Users/Ярослав/CLionProjects/ChangeCipher/MyCipher.h
+
